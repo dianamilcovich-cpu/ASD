@@ -4,106 +4,82 @@
 
 using namespace std;
 
+// Перегрузка операторов сравнения для struct key
+bool operator>(const key& a, const key& b) {
+    // Сравнение по дате (возрастание)
+    if (a.data.year != b.data.year)
+        return a.data.year > b.data.year;
+    if (a.data.month != b.data.month)
+        return a.data.month > b.data.month;
+    if (a.data.day != b.data.day)
+        return a.data.day > b.data.day;
 
-void sort_shaker(vector <key>& data, int n) {
+    // Даты равны - сравнение по ФИО (убывание)
+    if (a.fio.F != b.fio.F)
+        return a.fio.F < b.fio.F;
+    if (a.fio.I != b.fio.I)
+        return a.fio.I < b.fio.I;
+    return a.fio.O < b.fio.O;
+}
+
+bool operator<(const key& a, const key& b) {
+    // Сравнение по дате (возрастание)
+    if (a.data.year != b.data.year)
+        return a.data.year < b.data.year;
+    if (a.data.month != b.data.month)
+        return a.data.month < b.data.month;
+    if (a.data.day != b.data.day)
+        return a.data.day < b.data.day;
+
+    // Даты равны - сравнение по ФИО (убывание)
+    if (a.fio.F != b.fio.F)
+        return a.fio.F > b.fio.F;
+    if (a.fio.I != b.fio.I)
+        return a.fio.I > b.fio.I;
+    return a.fio.O > b.fio.O;
+}
+
+void sort_shaker(vector<key>& data, int n) {
     int left = 0;
     int right = n - 1;
-    while(left < right){
-        for(int i = left; i < right; i++) {
-            int flag = 0;
 
-            // Дата по ВОЗРАСТАНИЮ
-            if (data[i].data.year > data[i+1].data.year
-                || (data[i].data.year == data[i+1].data.year && data[i].data.month > data[i+1].data.month)
-                || (data[i].data.year == data[i+1].data.year && data[i].data.month == data[i+1].data.month && data[i].data.day > data[i+1].data.day)) {
-                flag = 1;
-            }
-            // Если даты равны, ФИО по УБЫВАНИЮ
-            else if (data[i].data.year == data[i+1].data.year
-                     && data[i].data.month == data[i+1].data.month
-                     && data[i].data.day == data[i+1].data.day) {
-                if (data[i].fio.F < data[i+1].fio.F ||
-                   (data[i].fio.F == data[i+1].fio.F && data[i].fio.I < data[i+1].fio.I) ||
-                   (data[i].fio.F == data[i+1].fio.F && data[i].fio.I == data[i+1].fio.I && data[i].fio.O < data[i+1].fio.O)) {
-                    flag = 1;
-                }
-            }
-
-            if (flag == 1) {
+    while (left < right) {
+        // Проход слева направо
+        for (int i = left; i < right; i++) {
+            if (data[i] > data[i + 1]) {
                 key temp = data[i];
-                data[i] = data[i+1];
-                data[i+1] = temp;
+                data[i] = data[i + 1];
+                data[i + 1] = temp;
             }
         }
         right--;
 
-        for(int i = right; i > left; i--){
-            int swap_flag = 0;
-
-            // Дата по ВОЗРАСТАНИЮ
-            if (data[i-1].data.year > data[i].data.year
-                || (data[i-1].data.year == data[i].data.year && data[i-1].data.month > data[i].data.month)
-                || (data[i-1].data.year == data[i].data.year && data[i-1].data.month == data[i].data.month && data[i-1].data.day > data[i].data.day)) {
-                swap_flag = 1;
-            }
-            // Если даты равны, ФИО по УБЫВАНИЮ
-            else if (data[i-1].data.year == data[i].data.year
-                     && data[i-1].data.month == data[i].data.month
-                     && data[i-1].data.day == data[i].data.day) {
-                if (data[i-1].fio.F < data[i].fio.F ||  // ЗНАК < для убывания
-                   (data[i-1].fio.F == data[i].fio.F && data[i-1].fio.I < data[i].fio.I) ||
-                   (data[i-1].fio.F == data[i].fio.F && data[i-1].fio.I == data[i].fio.I && data[i-1].fio.O < data[i].fio.O)) {
-                    swap_flag = 1;
-                }
-            }
-
-            if (swap_flag == 1) {
-                key temp = data[i-1];
-                data[i-1] = data[i];
+        // Проход справа налево
+        for (int i = right; i > left; i--) {
+            if (data[i - 1] > data[i]) {
+                key temp = data[i - 1];
+                data[i - 1] = data[i];
                 data[i] = temp;
             }
         }
         left++;
     }
 }
-void sort_Shella(vector <key>& data, int n) {
+
+void sort_Shella(vector<key>& data, int n) {
     int gap = n / 2;
+
     while (gap > 0) {
         for (int i = gap; i < n; i++) {
+            key temp = data[i];
             int j = i;
-            while (j >= gap) {
 
-                if (data[j].data.year < data[j - gap].data.year ||
-                    (data[j].data.year == data[j - gap].data.year &&
-                     data[j].data.month < data[j - gap].data.month) ||
-                    (data[j].data.year == data[j - gap].data.year &&
-                     data[j].data.month == data[j - gap].data.month &&
-                     data[j].data.day < data[j - gap].data.day)) {
-
-
-                    key temp = data[j];
-                    data[j] = data[j - gap];
-                    data[j - gap] = temp;
-                    j -= gap;
-                     }
-
-                else if (data[j].data.year == data[j - gap].data.year &&
-                         data[j].data.month == data[j - gap].data.month &&
-                         data[j].data.day == data[j - gap].data.day &&
-                         (data[j - gap].fio.F > data[j].fio.F ||
-                          (data[j - gap].fio.F == data[j].fio.F && data[j - gap].fio.I > data[j].fio.I) ||
-                          (data[j - gap].fio.F == data[j].fio.F && data[j - gap].fio.I == data[j].fio.I && data[j - gap].fio.O > data[j].fio.O))) {
-
-
-                    key temp = data[j];
-                    data[j] = data[j - gap];
-                    data[j - gap] = temp;
-                    j -= gap;
-                          }
-                else {
-                    break;
-                }
+            // Сдвигаем элементы, пока не найдём правильную позицию
+            while (j >= gap && temp < data[j - gap]) {
+                data[j] = data[j - gap];
+                j -= gap;
             }
+            data[j] = temp;
         }
         gap /= 2;
     }
