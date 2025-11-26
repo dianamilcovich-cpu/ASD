@@ -82,11 +82,23 @@ build ASD.exe: CXX_EXECUTABLE_LINKER__ASD_Debug CMakeFiles/ASD.dir/main.cpp.obj
 
 build cmake_object_order_depends_target_LAB_2: phony || .
 
-build CMakeFiles/LAB_2.dir/LAB_2.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/LAB_2.cpp || cmake_object_order_depends_target_LAB_2
-  DEP_FILE = CMakeFiles\LAB_2.dir\LAB_2.cpp.obj.d
+build CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/LAB_2.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\src\LAB_2.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LAB_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src
+
+build CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/sorts/sorts.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\src\sorts\sorts.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\sorts
+
+build CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/Structs/structs.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\src\Structs\structs.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\Structs
 
 
 # =============================================================================
@@ -96,7 +108,7 @@ build CMakeFiles/LAB_2.dir/LAB_2.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$
 #############################################
 # Link the executable LAB_2.exe
 
-build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/LAB_2.cpp.obj
+build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LAB_2.dir
