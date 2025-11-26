@@ -100,6 +100,12 @@ build CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_2_unsc
   OBJECT_DIR = CMakeFiles\LAB_2.dir
   OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\Structs
 
+build CMakeFiles/LAB_2.dir/src/file_work/file_work.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/file_work/file_work.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\src\file_work\file_work.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\file_work
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LAB_2
@@ -108,7 +114,7 @@ build CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_2_unsc
 #############################################
 # Link the executable LAB_2.exe
 
-build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj
+build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj CMakeFiles/LAB_2.dir/src/file_work/file_work.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LAB_2.dir

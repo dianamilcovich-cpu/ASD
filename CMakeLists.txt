@@ -10,5 +10,7 @@ add_executable(LAB_2
         src/sorts/sorts.h
         src/Structs/structs.cpp
         src/Structs/structs.h
+        src/file_work/file_work.cpp
+        src/file_work/file_work.h
 )
 
