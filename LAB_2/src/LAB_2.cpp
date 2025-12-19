@@ -15,7 +15,7 @@ using namespace std::chrono;
 
 int main(){
     system("chcp 65001");
-    int N = 6;
+    int N = 10000;
     vector <key> mas(N);
 
     file_read("../static/in/input_10000.txt", mas ,N);
@@ -26,7 +26,7 @@ int main(){
     writeFile("../static/out/out_data_shaker", mas, N, duration);
 
 
-    file_read("../static/in/input_100000.txt", mas ,N);
+    file_read("../static/in/input_10000.txt", mas ,N);
     start = high_resolution_clock::now();
     sort_Shella(mas, N);
     end = high_resolution_clock::now();

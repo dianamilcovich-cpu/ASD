@@ -1,6 +1,3 @@
-//
-// Created by п on 26.11.2025.
-//
 
 #include "file_work.h"
 #include "../Structs/structs.h"

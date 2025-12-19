@@ -55,6 +55,42 @@ build CMakeFiles/ASD.dir/main.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD
   OBJECT_DIR = CMakeFiles\ASD.dir
   OBJECT_FILE_DIR = CMakeFiles\ASD.dir
 
+build CMakeFiles/ASD.dir/LAB_3/src/Structs/structs.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/src/Structs/structs.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\src\Structs\structs.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3\src\Structs
+
+build CMakeFiles/ASD.dir/LAB_3/src/work_file/work_file.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/src/work_file/work_file.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\src\work_file\work_file.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3\src\work_file
+
+build CMakeFiles/ASD.dir/LAB_3/src/Sort/sort.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/src/Sort/sort.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\src\Sort\sort.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3\src\Sort
+
+build CMakeFiles/ASD.dir/LAB_3/src/Barriers/barriers.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/src/Barriers/barriers.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\src\Barriers\barriers.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3\src\Barriers
+
+build CMakeFiles/ASD.dir/LAB_3/src/Search/search.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/src/Search/search.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\src\Search\search.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3\src\Search
+
+build CMakeFiles/ASD.dir/LAB_3/LAB_3.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD/LAB_3/LAB_3.cpp || cmake_object_order_depends_target_ASD
+  DEP_FILE = CMakeFiles\ASD.dir\LAB_3\LAB_3.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ASD.dir
+  OBJECT_FILE_DIR = CMakeFiles\ASD.dir\LAB_3
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ASD
@@ -63,7 +99,7 @@ build CMakeFiles/ASD.dir/main.cpp.obj: CXX_COMPILER__ASD_unscanned_Debug D$:/ASD
 #############################################
 # Link the executable ASD.exe
 
-build ASD.exe: CXX_EXECUTABLE_LINKER__ASD_Debug CMakeFiles/ASD.dir/main.cpp.obj
+build ASD.exe: CXX_EXECUTABLE_LINKER__ASD_Debug CMakeFiles/ASD.dir/main.cpp.obj CMakeFiles/ASD.dir/LAB_3/src/Structs/structs.cpp.obj CMakeFiles/ASD.dir/LAB_3/src/work_file/work_file.cpp.obj CMakeFiles/ASD.dir/LAB_3/src/Sort/sort.cpp.obj CMakeFiles/ASD.dir/LAB_3/src/Barriers/barriers.cpp.obj CMakeFiles/ASD.dir/LAB_3/src/Search/search.cpp.obj CMakeFiles/ASD.dir/LAB_3/LAB_3.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ASD.dir
@@ -82,29 +118,29 @@ build ASD.exe: CXX_EXECUTABLE_LINKER__ASD_Debug CMakeFiles/ASD.dir/main.cpp.obj
 
 build cmake_object_order_depends_target_LAB_2: phony || .
 
-build CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/LAB_2.cpp || cmake_object_order_depends_target_LAB_2
-  DEP_FILE = CMakeFiles\LAB_2.dir\src\LAB_2.cpp.obj.d
+build CMakeFiles/LAB_2.dir/LAB_2/src/LAB_2.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/LAB_2/src/LAB_2.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\LAB_2\src\LAB_2.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LAB_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\LAB_2\src
 
-build CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/sorts/sorts.cpp || cmake_object_order_depends_target_LAB_2
-  DEP_FILE = CMakeFiles\LAB_2.dir\src\sorts\sorts.cpp.obj.d
+build CMakeFiles/LAB_2.dir/LAB_2/src/sorts/sorts.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/LAB_2/src/sorts/sorts.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\LAB_2\src\sorts\sorts.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LAB_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\sorts
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\LAB_2\src\sorts
 
-build CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/Structs/structs.cpp || cmake_object_order_depends_target_LAB_2
-  DEP_FILE = CMakeFiles\LAB_2.dir\src\Structs\structs.cpp.obj.d
+build CMakeFiles/LAB_2.dir/LAB_2/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/LAB_2/src/Structs/structs.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\LAB_2\src\Structs\structs.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LAB_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\Structs
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\LAB_2\src\Structs
 
-build CMakeFiles/LAB_2.dir/src/file_work/file_work.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/src/file_work/file_work.cpp || cmake_object_order_depends_target_LAB_2
-  DEP_FILE = CMakeFiles\LAB_2.dir\src\file_work\file_work.cpp.obj.d
+build CMakeFiles/LAB_2.dir/LAB_2/src/file_work/file_work.cpp.obj: CXX_COMPILER__LAB_2_unscanned_Debug D$:/ASD/LAB_2/src/file_work/file_work.cpp || cmake_object_order_depends_target_LAB_2
+  DEP_FILE = CMakeFiles\LAB_2.dir\LAB_2\src\file_work\file_work.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LAB_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\src\file_work
+  OBJECT_FILE_DIR = CMakeFiles\LAB_2.dir\LAB_2\src\file_work
 
 
 # =============================================================================
@@ -114,7 +150,7 @@ build CMakeFiles/LAB_2.dir/src/file_work/file_work.cpp.obj: CXX_COMPILER__LAB_2_
 #############################################
 # Link the executable LAB_2.exe
 
-build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/src/LAB_2.cpp.obj CMakeFiles/LAB_2.dir/src/sorts/sorts.cpp.obj CMakeFiles/LAB_2.dir/src/Structs/structs.cpp.obj CMakeFiles/LAB_2.dir/src/file_work/file_work.cpp.obj
+build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/LAB_2/src/LAB_2.cpp.obj CMakeFiles/LAB_2.dir/LAB_2/src/sorts/sorts.cpp.obj CMakeFiles/LAB_2.dir/LAB_2/src/Structs/structs.cpp.obj CMakeFiles/LAB_2.dir/LAB_2/src/file_work/file_work.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LAB_2.dir
