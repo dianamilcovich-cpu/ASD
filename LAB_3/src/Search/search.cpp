@@ -4,8 +4,7 @@ int InterpolationSearch(vector<Record>& a, int key, int& steps) {
     int right = a.size() - 1;
     steps = 0;
     while (true) {
-        int pos;
-        pos = left + (double)(key - a[left].Number)*(right - left)/(a[right].Number - a[left].Number );
+        int pos = left + (double) (key - a[left].Number) * (right - left) / (a[right].Number - a[left].Number);
         if (a[pos].Number < key)
             left = pos + 1;
         else if (a[pos].Number > key)

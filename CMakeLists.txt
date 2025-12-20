@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(LAB_3
         LAB_3/src/Structs/structs.h
-        LAB_3/src/Structs/structs.cpp
         LAB_3/src/work_file/work_file.h
         LAB_3/src/work_file/work_file.cpp
         LAB_3/src/Sort/sort.h

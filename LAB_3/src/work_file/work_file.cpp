@@ -3,18 +3,15 @@
 #include<fstream>
 #include <iostream>
 using namespace std;
-bool readFile(const string& inputFile, int n, vector<Record>& records ) {
+bool readFile(const string& inputFile, const int n, vector<Record>& records ) {
     ifstream file(inputFile);
     if (!file)
         return false;
     records.resize(n);
-    Record temp;
     for (int i = 0; i < n; i++) {
-        file>>temp.date.day>>temp.date.month>>temp.date.year>>
-        temp.fio.f>>temp.fio.i>>temp.fio.o>>
-        temp.Number;
-        temp.StrokeNumber = i +1;
-        records[i] = temp;
+        file>>records[i].date.day>>records[i].date.month>>records[i].date.year>>
+        records[i].fio.f>>records[i].fio.i>>records[i].fio.o>>records[i].Number;
+        records[i].StrokeNumber = i + 1;
     }
     file.close();
     return true;

@@ -9,8 +9,8 @@ using namespace std;
 int main() {
     vector<Record> records;
     int n = 100000;
-    int key = 49436;
-    if (!readFile("../LAB_3/Static/input_1000000.txt", n, records)) {
+    int key = 47930;
+    if (!readFile("../LAB_3/Static/inpur_1000000.txt", n, records)) {
         writeFile("../Static/output",-1,0);
         return 0;
     }

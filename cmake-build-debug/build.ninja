@@ -49,12 +49,6 @@ cmake_ninja_workdir = D$:/ASD/cmake-build-debug/
 
 build cmake_object_order_depends_target_LAB_3: phony || .
 
-build CMakeFiles/LAB_3.dir/LAB_3/src/Structs/structs.cpp.obj: CXX_COMPILER__LAB_3_unscanned_Debug D$:/ASD/LAB_3/src/Structs/structs.cpp || cmake_object_order_depends_target_LAB_3
-  DEP_FILE = CMakeFiles\LAB_3.dir\LAB_3\src\Structs\structs.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\LAB_3.dir
-  OBJECT_FILE_DIR = CMakeFiles\LAB_3.dir\LAB_3\src\Structs
-
 build CMakeFiles/LAB_3.dir/LAB_3/src/work_file/work_file.cpp.obj: CXX_COMPILER__LAB_3_unscanned_Debug D$:/ASD/LAB_3/src/work_file/work_file.cpp || cmake_object_order_depends_target_LAB_3
   DEP_FILE = CMakeFiles\LAB_3.dir\LAB_3\src\work_file\work_file.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -93,7 +87,7 @@ build CMakeFiles/LAB_3.dir/LAB_3/src/LAB_3.cpp.obj: CXX_COMPILER__LAB_3_unscanne
 #############################################
 # Link the executable LAB_3.exe
 
-build LAB_3.exe: CXX_EXECUTABLE_LINKER__LAB_3_Debug CMakeFiles/LAB_3.dir/LAB_3/src/Structs/structs.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/work_file/work_file.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Sort/sort.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Barriers/barriers.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Search/search.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/LAB_3.cpp.obj
+build LAB_3.exe: CXX_EXECUTABLE_LINKER__LAB_3_Debug CMakeFiles/LAB_3.dir/LAB_3/src/work_file/work_file.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Sort/sort.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Barriers/barriers.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/Search/search.cpp.obj CMakeFiles/LAB_3.dir/LAB_3/src/LAB_3.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\LAB_3.dir
