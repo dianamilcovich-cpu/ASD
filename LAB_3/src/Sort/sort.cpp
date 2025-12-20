@@ -7,7 +7,7 @@ void ShellSort(vector<Record>& a) {
         for (int i = gap; i < n; i++) {
             Record temp = a[i];
             int j = i;
-            while (j >= gap && a[j - gap].requestNumber > temp.requestNumber) {
+            while (j >= gap && a[j - gap].Number > temp.Number) {
                 a[j] = a[j -gap];
                 j-=gap;
             }

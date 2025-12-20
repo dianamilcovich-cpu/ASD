@@ -4,9 +4,9 @@ using namespace std;
 
 #include <vector>;
 #include <string>;
-#include <structs.h>
+#include "../Structs/structs.h"
 
-bool readFile(const string& filename, int n, vector<Record>& records );
-
+bool readFile(const string& inputFile, int n, vector<Record>& records );
+void writeFile(const string& outputFile, int Index, int steps);
 
 #endif //WORK_FILE_H

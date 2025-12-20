@@ -1,18 +1,18 @@
 #include "barriers.h"
 #include "../Structs/structs.h"
 using namespace std;
-void addBarriers(vector<Record>& records) {
-    int n = records.size();
-    records.resize(n+2);
+void addBarriers(vector<Record>& a) {
+    int n = a.size();
+    a.resize(n+2);
     for (int i = n-1; i >= 0; i--) {
-        records[i+1] = records[i];
+        a[i+1] = a[i];
     }
     //левый барьер
-    records[0].requestNumber = -10000000000;
-    records[0].StrokeNumber = 0;
+    a[0].Number = -10000000000;
+    a[0].StrokeNumber = 0;
 
     //правый барьер
-    records[n + 1].requestNumber = 10000000000;
-    records[n +1].StrokeNumber = 0;
+    a[n + 1].Number = 10000000000;
+    a[n +1].StrokeNumber = 0;
 
 }
