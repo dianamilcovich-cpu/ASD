@@ -3,16 +3,19 @@
 #include<fstream>
 #include <iostream>
 using namespace std;
-bool readFile(const string& inputFile, const int n, vector<Record>& records ) {
+bool readFile(const string& inputFile, const int n, vector<Record>& records) {
     ifstream file(inputFile);
-    if (!file)
+    if (!file.is_open()) {
+        cerr << "Ошибка открытия файла: " << inputFile << endl;
         return false;
-    records.resize(n);
+    }
+
     for (int i = 0; i < n; i++) {
-        file>>records[i].date.day>>records[i].date.month>>records[i].date.year>>
-        records[i].fio.f>>records[i].fio.i>>records[i].fio.o>>records[i].Number;
+        file >> records[i].date.day >> records[i].date.month >> records[i].date.year
+        >> records[i].fio.f >> records[i].fio.i >> records[i].fio.o >> records[i].Number;
         records[i].StrokeNumber = i + 1;
     }
+
     file.close();
     return true;
 }

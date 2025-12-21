@@ -15,7 +15,7 @@ struct FIO {
 struct Record {
     Date date;
     FIO fio;
-    int Number;
+    long long Number;
     int StrokeNumber;
 };
 #endif //STRUCTS_H
