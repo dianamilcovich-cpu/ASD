@@ -9,9 +9,9 @@
 using namespace std;
 int main() {
     system("chcp 65001");
-    int n = 100000;
+    int n = 1000000;
     vector<Record> records(n);
-    int key = 546969;
+    int key = 287191;
     if (!readFile("../LAB_3/Static/input_100000.txt", n, records)) {
         writeFile("../Static/output.txt",-1,0);
         return 0;
