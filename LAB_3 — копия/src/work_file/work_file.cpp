@@ -26,7 +26,7 @@ void writeFile(const string& outputFile, int Index, int steps) {
     if (Index == -1)
         file_out<<"Ключ не найден\n";
     else
-        file_out<<"Номер строки файла: "<<Index<<"\n";
-    file_out<<"Количество шагов поиска: "<<steps<<"\n";
+        file_out<<"Номер строки файла"<<Index<<"\n";
+    file_out<<"Количество шагов поиска:"<<steps<<"\n";
     file_out.close();
 }

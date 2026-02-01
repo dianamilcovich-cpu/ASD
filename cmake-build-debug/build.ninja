@@ -148,6 +148,57 @@ build LAB_2.exe: CXX_EXECUTABLE_LINKER__LAB_2_Debug CMakeFiles/LAB_2.dir/LAB_2/s
   TARGET_IMPLIB = libLAB_2.dll.a
   TARGET_PDB = LAB_2.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target LAB4
+
+
+#############################################
+# Order-only phony target for LAB4
+
+build cmake_object_order_depends_target_LAB4: phony || .
+
+build CMakeFiles/LAB4.dir/LAB4/src/file_work/file_work.cpp.obj: CXX_COMPILER__LAB4_unscanned_Debug D$:/ASD/LAB4/src/file_work/file_work.cpp || cmake_object_order_depends_target_LAB4
+  DEP_FILE = CMakeFiles\LAB4.dir\LAB4\src\file_work\file_work.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB4.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB4.dir\LAB4\src\file_work
+
+build CMakeFiles/LAB4.dir/LAB4/LAB4.cpp.obj: CXX_COMPILER__LAB4_unscanned_Debug D$:/ASD/LAB4/LAB4.cpp || cmake_object_order_depends_target_LAB4
+  DEP_FILE = CMakeFiles\LAB4.dir\LAB4\LAB4.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB4.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB4.dir\LAB4
+
+build CMakeFiles/LAB4.dir/LAB4/src/search/BMX/BMX.cpp.obj: CXX_COMPILER__LAB4_unscanned_Debug D$:/ASD/LAB4/src/search/BMX/BMX.cpp || cmake_object_order_depends_target_LAB4
+  DEP_FILE = CMakeFiles\LAB4.dir\LAB4\src\search\BMX\BMX.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB4.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB4.dir\LAB4\src\search\BMX
+
+build CMakeFiles/LAB4.dir/LAB4/src/search/RK/RK.cpp.obj: CXX_COMPILER__LAB4_unscanned_Debug D$:/ASD/LAB4/src/search/RK/RK.cpp || cmake_object_order_depends_target_LAB4
+  DEP_FILE = CMakeFiles\LAB4.dir\LAB4\src\search\RK\RK.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LAB4.dir
+  OBJECT_FILE_DIR = CMakeFiles\LAB4.dir\LAB4\src\search\RK
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target LAB4
+
+
+#############################################
+# Link the executable LAB4.exe
+
+build LAB4.exe: CXX_EXECUTABLE_LINKER__LAB4_Debug CMakeFiles/LAB4.dir/LAB4/src/file_work/file_work.cpp.obj CMakeFiles/LAB4.dir/LAB4/LAB4.cpp.obj CMakeFiles/LAB4.dir/LAB4/src/search/BMX/BMX.cpp.obj CMakeFiles/LAB4.dir/LAB4/src/search/RK/RK.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\LAB4.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = LAB4.exe
+  TARGET_IMPLIB = libLAB4.dll.a
+  TARGET_PDB = LAB4.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -174,6 +225,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build LAB4: phony LAB4.exe
+
 build LAB_2: phony LAB_2.exe
 
 build LAB_3: phony LAB_3.exe
@@ -186,7 +239,7 @@ build LAB_3: phony LAB_3.exe
 #############################################
 # Folder: D:/ASD/cmake-build-debug
 
-build all: phony LAB_3.exe LAB_2.exe
+build all: phony LAB_3.exe LAB_2.exe LAB4.exe
 
 # =============================================================================
 # Built-in targets

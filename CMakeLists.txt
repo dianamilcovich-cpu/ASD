@@ -24,3 +24,12 @@ add_executable(LAB_2
         LAB_2/src/file_work/file_work.h
 )
 
+add_executable(LAB4
+        LAB4/src/file_work/file_work.cpp
+        LAB4/LAB4.cpp
+        LAB4/src/search/BMX/BMX.cpp
+        LAB4/src/search/BMX/BMX.hpp
+        LAB4/src/search/RK/RK.cpp
+        LAB4/src/search/RK/RK.h
+
+)

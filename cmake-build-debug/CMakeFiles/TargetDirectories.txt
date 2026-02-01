@@ -1,4 +1,5 @@
 D:/ASD/cmake-build-debug/CMakeFiles/LAB_3.dir
 D:/ASD/cmake-build-debug/CMakeFiles/LAB_2.dir
+D:/ASD/cmake-build-debug/CMakeFiles/LAB4.dir
 D:/ASD/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/ASD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
