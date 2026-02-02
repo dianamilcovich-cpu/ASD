@@ -7,7 +7,7 @@ using namespace std;
 
 
 
-bool bmh_exact_count(const std::string& text, const std::string& pattern, int requiredCount) {
+int bmh_exact_count(const std::string& text, const std::string& pattern, int requiredCount) {
 
     int m = static_cast<int>(pattern.length());
     int n = static_cast<int>(text.length());
@@ -39,16 +39,13 @@ bool bmh_exact_count(const std::string& text, const std::string& pattern, int re
         if (j < 0) {
             foundCount++;
 
-            if (foundCount > requiredCount)
-                return false;
-
             i += 1;
         } else {
             i += skip[(unsigned char)text[i + m - 1]];
         }
     }
 
-    return foundCount == requiredCount;
+    return foundCount;
 }
 
 vector<int> bmh_search_persons(const vector<person>& data, const vector<string>& pattern_m, int requiredCount) {
@@ -62,14 +59,18 @@ vector<int> bmh_search_persons(const vector<person>& data, const vector<string>&
 
         for(const string& pattern : pattern_m){
 
-            bool descMatch = false;
+            int fioMatch;
+            int descMatch;
 
-            bool fioMatch = bmh_exact_count(fioStr, pattern, requiredCount);
-            if(!fioMatch){
+
+            fioMatch = bmh_exact_count(fioStr, pattern, requiredCount);
+
+            if(fioMatch != requiredCount){
                 descMatch = bmh_exact_count(p.description, pattern, requiredCount);
+                fioMatch += descMatch;
             }
 
-            if (fioMatch || descMatch) {
+            if (fioMatch >= requiredCount) {
                 result[k] = p.stroke;
                 flag = 1;
                 ++k;
